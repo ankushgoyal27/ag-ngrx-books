@@ -7,7 +7,6 @@ import {
   addBook,
   removeBook
 } from "./state/books.actions";
-import { GoogleBooksService } from "./book-list/books.service";
 import * as BookActions from "./state/books.actions";
 
 @Component({
@@ -27,12 +26,9 @@ export class AppComponent {
     this.store.dispatch(removeBook({ bookId }));
   }
 
-  constructor(private booksService: GoogleBooksService, private store: Store) {}
+  constructor(private store: Store) {}
 
   ngOnInit() {
     this.store.dispatch(BookActions.BeginGetBookListAction());
-    // this.booksService.getBooks().subscribe(Book => {
-    //   this.store.dispatch(SuccessRetrievedBookList({ Book }));
-    // });
   }
 }

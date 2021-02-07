@@ -1,4 +1,4 @@
-import { createReducer, on, Action } from "@ngrx/store";
+import { createReducer, on } from "@ngrx/store";
 
 import { SuccessRetrievedBookList } from "./books.actions";
 import { Book } from "../book-list/books.model";

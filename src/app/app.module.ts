@@ -16,7 +16,10 @@ import { BooksEffect } from "./effects/books.effect";
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot({ books: booksReducer, collection: collectionReducer }),
+    StoreModule.forRoot({
+      books: booksReducer,
+      collection: collectionReducer
+    }),
     EffectsModule.forRoot([BooksEffect]),
     HttpClientModule
   ],
